@@ -131,5 +131,5 @@ collections:
       - { label: "Anno", name: "year", widget: "string" }
       - { label: "Copertina", name: "cover", widget: "image" }
       - { label: "Descrizione", name: "description", widget: "text" }
-      - { label: "Layout", name: "layout", widget: "hidden", default: "lastbook" }
+      - { label: "basixap", name: "basixap", widget: "hidden", default: "lastbook" }
       - { label: "Permalink", name: "permalink", widget: "string", default: "/lastbook/{{slug}}/" }
