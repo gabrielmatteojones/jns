@@ -2,42 +2,18 @@
 layout: base
 ---
 
-  <!-- LAYOUT PRINCIPALE -->
-  <div class="container my-4">
-    <div class="row">
-      
-      <!-- SIDEBAR INDICE -->
-      <aside class="col-lg-4 mb-4">
-        <nav class="sticky-top">
-          <div class="accordion">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingIndex">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIndex" aria-expanded="true">
-                  Indice della pagina
-                </button>
-              </h2>
-              <div id="collapseIndex" class="accordion-collapse collapse show" aria-labelledby="headingIndex">
-                <div class="accordion-body">
-                  <div class="it-navscroll-progress mb-2">
-                    <div class="progress">
-                      <div class="progress-bar it-navscroll-progressbar" role="progressbar" style="width:0%;"></div>
-                    </div>
-                  </div>
-                  <ul class="link-list">
-                    {% assign toc_html = page.content | toc_only %}
-                    {{ toc_html }}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </aside>
 
-      <!-- CONTENUTO PRINCIPALE -->
-      <main class="col-lg-8">
-        {{ content }}
-      </main>
+    <section class="hero">
+        <div class="title">
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.collegamento }}</p>
+        </div>
+    </section>
 
-    </div>
-  </div>
+    <nav>
+        <a href="{{ site.url }}/FOIA/">FOIA</a>
+        <a href="{{ site.url }}/aree-tematiche/">Aree tematiche</a>
+        <a href="{{ site.url }}/assistenza/">Assistenza</a>
+        <a href="{{ site.url }}/uffici/">Uffici</a>
+        <a href="{{ site.url }}/blog/">Blog</a>
+    </nav>  
